@@ -26,6 +26,7 @@ function get_calibration_value(line; parse_digit_words::Bool=true)
             for (word, digit) in digit_words
                 if startswith(line[i:end], word)
                     push!(digits, digit)
+                    break
                 end
             end
         end
