@@ -4,9 +4,9 @@
 
 My solutions to [Advent of Code 2023](https://adventofcode.com/2023) using Julia.
 
-| Puzzle                                                              | Input                         | Solver                     | Topics |
-|:--------------------------------------------------------------------|:------------------------------|:---------------------------|:-------|
-| [Day 1](https://adventofcode.com/2023/day/1)                        | [Day1.txt](./data/Day1.txt)   | [Day1.jl](./src/Day1.jl)   |        |
+| Puzzle                                                              | Input                         | Solver                     | Topics         |
+|:--------------------------------------------------------------------|:------------------------------|:---------------------------|:---------------|
+| [Day 1: Trebuchet?!](https://adventofcode.com/2023/day/1)           | [Day1.txt](./data/Day1.txt)   | [Day1.jl](./src/Day1.jl)   | String Parsing |      |
 
 
 ## Install
