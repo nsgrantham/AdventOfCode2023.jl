@@ -18,6 +18,6 @@ using Test
     zoneight234
     7pqrstsixteen"""
 
-  @test sum(AdventOfCode2023.Day1.get_calibration_value.(readlines(IOBuffer(example1)))) == 142
-  @test sum(AdventOfCode2023.Day1.get_calibration_value.(readlines(IOBuffer(example2)))) == 281
+  @test AdventOfCode2023.Day1.solve(IOBuffer(example1))[1] == 142
+  @test sum(AdventOfCode2023.Day1.calibrate.(readlines(IOBuffer(example2)))) == 281
 end
