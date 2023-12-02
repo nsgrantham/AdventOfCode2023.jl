@@ -23,7 +23,7 @@ end
 function solve(input=pkgdir(AdventOfCode2023, "data", "Day2.txt"))
     games = parse.(Game, readlines(input))
     is_possible_rgb(game) = is_possible(game; red=12, green=13, blue=14)
-    p1 = sum(game.id for game in filter(is_possible_rgb, games))
+    p1 = sum(game.id for game in games if is_possible_rgb(game))
     p2 = sum(game.min_red * game.min_green * game.min_blue for game in games)
     p1, p2
 end
