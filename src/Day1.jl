@@ -4,21 +4,23 @@ using AdventOfCode2023
 
 
 const digit_words = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-const valid_digits = Regex("\\d|" * join(digit_words, "|"))
-const valid_digits_reversed = Regex("\\d|" * join(reverse.(digit_words), "|"))
+const digit_regex = Regex("\\d|" * join(digit_words, "|"))
+const reversed_digit_regex = Regex("\\d|" * join(reverse.(digit_words), "|"))
 
-digitify(str) = all(isdigit, str) ? parse(Int, str) : findfirst(==(str), digit_words)
+function digitize(s::String)
+    all(isdigit, s) ? parse(Int, s) : findfirst(==(s), digit_words)
+end
 
-function get_calibration_value(line)
-    first_digit = match(valid_digits, line).match
-    last_digit = reverse(match(valid_digits_reversed, reverse(line)).match)
-    10 * digitify(String(first_digit)) + digitify(String(last_digit))
+function calibrate(line::String)
+    a = match(digit_regex, line).match
+    z = reverse(match(reversed_digit_regex, reverse(line)).match)
+    10 * digitize(String(a)) + digitize(String(z))
 end
 
 function solve(input=pkgdir(AdventOfCode2023, "data", "Day1.txt"))
     lines = readlines(input)
-    p1 = sum(parse(Int, first(digits) * last(digits)) for digits in filter.(isdigit, lines))
-    p2 = sum(get_calibration_value.(lines))
+    p1 = sum(parse(Int, first(d) * last(d)) for d in filter.(isdigit, lines))
+    p2 = sum(calibrate.(lines))
     p1, p2
 end
 
