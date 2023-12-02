@@ -12,14 +12,8 @@ end
 
 function Base.parse(::Type{Game}, line::String)
     game_id = parse(Int, only(match(r"Game (\d+):", line).captures))
-    min_red = get_min_cubes(line, "red")
-    min_green = get_min_cubes(line, "green")
-    min_blue = get_min_cubes(line, "blue")
-    Game(game_id, min_red, min_green, min_blue)
-end
-
-function get_min_cubes(line::String, color::String)
-    maximum(parse(Int, only(m.captures)) for m in eachmatch(Regex("(\\d+) $color"), line); init=0)
+    min_cubes(color) = maximum(parse(Int, only(m.captures)) for m in eachmatch(Regex("(\\d+) $color"), line); init=0)
+    Game(game_id, min_cubes("red"), min_cubes("green"), min_cubes("blue"))
 end
 
 function is_possible(game::Game; red::Int=0, green::Int=0, blue::Int=0)
