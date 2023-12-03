@@ -2,6 +2,15 @@ module Day2
 
 using AdventOfCode2023
 
+# For a given game, let R be the number of red cubes in the bag, G the number
+# of green cubes in the bag, and B the number of blue cubes in the bag. We do
+# not get to observe R, G, or B, but by sampling with replacement from the
+# bag we can determine lower bounds for each. For sample i, let r_i be the
+# number of red cubes shown, g_i the number of green cubes shown, and b_i the
+# number of blue cubes shown. Across n samples, R is max(r_1, r_2, ..., r_n)
+# or greater, G is max(g_1, g_2, ..., g_n) or greater, and, finally, B is
+# max(b_1, b_2, ..., b_n) or greater. Let min_red, min_green, and min_blue
+# represent these lower bounds for R, G, and B respectively.
 
 struct Game
     id::Int
