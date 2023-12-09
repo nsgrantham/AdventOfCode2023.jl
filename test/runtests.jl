@@ -65,6 +65,14 @@ end
     @test AdventOfCode2023.Day4.solve(IOBuffer(example)) == (13, 30)
 end
 
+@testset "Day 6" begin
+    example = """
+    Time:      7  15   30
+    Distance:  9  40  200
+    """
+
+    @test AdventOfCode2023.Day6.solve(IOBuffer(example)) == (288, 71503)
+end
 
 @testset "Day 8" begin
     example1 = """
