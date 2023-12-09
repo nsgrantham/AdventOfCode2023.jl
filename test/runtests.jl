@@ -104,3 +104,13 @@ end
     @test AdventOfCode2023.Day8.solve(IOBuffer(example2))[1] == 6
     @test AdventOfCode2023.Day8.solve(IOBuffer(example3))[2] == 6
 end
+
+@testset "Day 9" begin
+    example = """
+    0 3 6 9 12 15
+    1 3 6 10 15 21
+    10 13 16 21 30 45
+    """
+
+    @test AdventOfCode2023.Day9.solve(IOBuffer(example)) == (114, 2)
+end
