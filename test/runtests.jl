@@ -34,6 +34,23 @@ end
     @test AdventOfCode2023.Day2.solve(IOBuffer(example)) == (8, 2286)
 end
 
+@testset "Day 3" begin
+    # `raw` avoids automatic string interpolation with $
+    example = raw"""
+    467..114..
+    ...*......
+    ..35..633.
+    ......#...
+    617*......
+    .....+.58.
+    ..592.....
+    ......755.
+    ...$.*....
+    .664.598..
+    """
+
+    @test AdventOfCode2023.Day3.solve(IOBuffer(example)) == (4361, 467835)
+end
 
 @testset "Day 4" begin
     example = """
@@ -48,3 +65,42 @@ end
     @test AdventOfCode2023.Day4.solve(IOBuffer(example)) == (13, 30)
 end
 
+
+@testset "Day 8" begin
+    example1 = """
+    RL
+    
+    AAA = (BBB, CCC)
+    BBB = (DDD, EEE)
+    CCC = (ZZZ, GGG)
+    DDD = (DDD, DDD)
+    EEE = (EEE, EEE)
+    GGG = (GGG, GGG)
+    ZZZ = (ZZZ, ZZZ)
+    """
+    
+    example2 = """
+    LLR
+    
+    AAA = (BBB, BBB)
+    BBB = (AAA, ZZZ)
+    ZZZ = (ZZZ, ZZZ)
+    """
+    
+    example3 = """
+    LR
+    
+    11A = (11B, XXX)
+    11B = (XXX, 11Z)
+    11Z = (11B, XXX)
+    22A = (22B, XXX)
+    22B = (22C, 22C)
+    22C = (22Z, 22Z)
+    22Z = (22B, 22B)
+    XXX = (XXX, XXX)
+    """
+    
+    @test AdventOfCode2023.Day8.solve(IOBuffer(example1))[1] == 2
+    @test AdventOfCode2023.Day8.solve(IOBuffer(example2))[1] == 6
+    @test AdventOfCode2023.Day8.solve(IOBuffer(example3))[2] == 6
+end
