@@ -13,6 +13,7 @@ My solutions to [Advent of Code 2023](https://adventofcode.com/2023) using Julia
 | [Day 6: Wait For It](https://adventofcode.com/2023/day/6)           | [Day6.txt](./data/Day6.txt)   | [Day6.jl](./src/Day6.jl)   | Quadratic Equations     |
 | [Day 8: Haunted Wasteland](https://adventofcode.com/2023/day/8)     | [Day8.txt](./data/Day8.txt)   | [Day8.jl](./src/Day8.jl)   | Networks, Prime Factors |
 | [Day 9: Mirage Maintenance](https://adventofcode.com/2023/day/9)    | [Day9.txt](./data/Day9.txt)   | [Day9.jl](./src/Day9.jl)   | Recursion               |
+| [Day 11: Cosmic Expansion](https://adventofcode.com/2023/day/11)    | [Day11.txt](./data/Day11.txt) | [Day11.jl](./src/Day11.jl) | 2D Distances            |
 
 
 ## Install

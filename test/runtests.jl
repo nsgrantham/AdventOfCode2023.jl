@@ -3,6 +3,7 @@ using Test
 
 
 @testset "Day 1" begin
+    
     example1 = """
     1abc2
     pqr3stu8vwx
@@ -18,8 +19,8 @@ using Test
     zoneight234
     7pqrstsixteen"""
 
-  @test AdventOfCode2023.Day1.solve(IOBuffer(example1))[1] == 142
-  @test sum(AdventOfCode2023.Day1.calibrate.(readlines(IOBuffer(example2)))) == 281
+    @test AdventOfCode2023.Day1.solve(IOBuffer(example1))[1] == 142
+    @test sum(AdventOfCode2023.Day1.calibrate.(readlines(IOBuffer(example2)))) == 281
 end
 
 @testset "Day 2" begin
@@ -35,7 +36,7 @@ end
 end
 
 @testset "Day 3" begin
-    # `raw` avoids automatic string interpolation with $
+    # `raw` avoids `$` triggering automatic string interpolation
     example = raw"""
     467..114..
     ...*......
@@ -75,6 +76,7 @@ end
 end
 
 @testset "Day 8" begin
+    
     example1 = """
     RL
     
@@ -121,4 +123,22 @@ end
     """
 
     @test AdventOfCode2023.Day9.solve(IOBuffer(example)) == (114, 2)
+end
+
+@testset "Day 11" begin
+    
+    example = """
+    ...#......
+    .......#..
+    #.........
+    ..........
+    ......#...
+    .#........
+    .........#
+    ..........
+    .......#..
+    #...#.....
+    """
+
+    @test AdventOfCode2023.Day11.solve(IOBuffer(example)) == (374, 82000210)
 end
