@@ -15,6 +15,7 @@ My solutions to [Advent of Code 2023](https://adventofcode.com/2023) using Julia
 | [Day 9: Mirage Maintenance](https://adventofcode.com/2023/day/9)    | [Day9.txt](./data/Day9.txt)   | [Day9.jl](./src/Day9.jl)   | Recursion               |
 | [Day 11: Cosmic Expansion](https://adventofcode.com/2023/day/11)    | [Day11.txt](./data/Day11.txt) | [Day11.jl](./src/Day11.jl) | 2D Distances            |
 | [Day 12: Hot Springs](https://adventofcode.com/2023/day/12)         | [Day12.txt](./data/Day12.txt) | [Day12.jl](./src/Day12.jl) | Recursion, Memoization  |
+| [Day 13: Point of Incidence](https://adventofcode.com/2023/day/13)  | [Day13.txt](./data/Day13.txt) | [Day13.jl](./src/Day13.jl) | Symmetry                |
 
 
 ## Install

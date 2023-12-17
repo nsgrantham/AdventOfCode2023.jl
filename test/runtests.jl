@@ -155,3 +155,25 @@ end
 
     @test AdventOfCode2023.Day12.solve(IOBuffer(example)) == (21, 525152)
 end
+
+@testset "Day 13" begin
+    example = """
+    #.##..##.
+    ..#.##.#.
+    ##......#
+    ##......#
+    ..#.##.#.
+    ..##..##.
+    #.#.##.#.
+    
+    #...##..#
+    #....#..#
+    ..##..###
+    #####.##.
+    #####.##.
+    ..##..###
+    #....#..#
+    """
+
+    @test AdventOfCode2023.Day13.solve(IOBuffer(example)) == (405, 400)
+end
