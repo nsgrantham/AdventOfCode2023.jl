@@ -75,6 +75,17 @@ end
     @test AdventOfCode2023.Day6.solve(IOBuffer(example)) == (288, 71503)
 end
 
+@testset "Day 7" begin
+    example = """
+    32T3K 765
+    T55J5 684
+    KK677 28
+    KTJJT 220
+    QQQJA 483"""
+
+    @test AdventOfCode2023.Day7.solve(IOBuffer(example)) == (6440, 5905)
+end
+
 @testset "Day 8" begin
     
     example1 = """
