@@ -8,7 +8,9 @@ struct Pattern
     has_smudge::Bool
 end
 
-Base.parse(::Type{Pattern}, str::AbstractString) = Pattern(stack(split(str, "\n"); dims=1), false)
+function Base.parse(::Type{Pattern}, str::AbstractString)
+    Pattern(permutedims(hcat(collect.(split(str, "\n"))...)), false)
+end
 
 function find_vertical_mirror(pattern::Pattern)
     smudge = pattern.has_smudge ? 1 : 0
